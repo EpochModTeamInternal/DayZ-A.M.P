@@ -610,7 +610,7 @@ class cfgWeapons
 		displayName = "Use";
 		canDrop = 0;
 		muzzles[] = {"this"};
-		magazines[] = {"ItemBandage","ItemHeatPack","PartWoodPile","PartFueltank","PartWheel","PartGeneric","PartEngine","PartVRotor","PartGlass","ItemWaterbottle","ItemWaterbottleUnfilled","ItemEpinephrine","ItemMorphine","ItemBloodbag","ItemAntibiotic","ItemPainkiller","ItemJerrycan","ItemGenerator","ItemTent","ItemSandbag","ItemTankTrap","ItemWire","FoodSteakRaw","TrashTinCan","ItemSodaCoke","ItemSodaPepsi","ItemSodaMdew","FoodEdible","FoodSteakCooked","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta"};
+		magazines[] = {"FoodBioMeat","ItemBandage","ItemHeatPack","PartWoodPile","PartFueltank","PartWheel","PartGeneric","PartEngine","PartVRotor","PartGlass","ItemWaterbottle","ItemWaterbottleUnfilled","ItemEpinephrine","ItemMorphine","ItemBloodbag","ItemAntibiotic","ItemPainkiller","ItemJerrycan","ItemGenerator","ItemTent","ItemSandbag","ItemTankTrap","ItemWire","FoodSteakRaw","TrashTinCan","ItemSodaCoke","ItemSodaPepsi","ItemSodaMdew","FoodEdible","FoodSteakCooked","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta"};
 		modes[] = {"this"};
 		useAction = 0;
 		useActionTitle = "";
@@ -1450,6 +1450,15 @@ class CfgMagazines
 				script = "spawn player_eat;";
 			};
 		};
+	};
+	class FoodBioMeat: FoodEdible
+	{
+		scope = 2;
+		displayName = "Bio Meat";
+		model = "\dayz_equip\models\biomeat_can.p3d";
+		picture = "\dayz_equip\textures\armourpottedmeat_CAN_test1_CA.paa";
+		descriptionShort = "Re purposed Meat";
+		bloodRegen = 1600;
 	};
 	class FoodSteakCooked: FoodEdible
 	{

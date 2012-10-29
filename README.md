@@ -7,7 +7,11 @@ Main goal: One DayZ based client and server build that will run on any arma2 map
 ========================
 
 * Added - Rocket_DZ skin is now droppable.
-* Added - Missing building loot and zombie spawns for many buildings on custom maps. (still needs more work)
+* Added - Missing building loot and zombie spawns for many buildings on custom maps.
+* Added - Missing fuel tanks and water well for other map support.
+* Added - 50% chance that zombies will attack you in a vehicle. ( More damage will be done to Wheels and Glass less to Body, Engine, and Fuel.)
+* Added - New rare canned meat product.
+* Fixed - UI Control error on right click inside gear menu.
 * Removed - All static debris. This is to allow mission placed objects and/or server side dynamic debris system.
 * Removed - All banned classes.
 * Removed - Auto refuel Land_Ind_FuelStation_Feed_Ep1 fuel station.

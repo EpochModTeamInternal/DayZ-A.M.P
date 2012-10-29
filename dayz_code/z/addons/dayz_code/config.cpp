@@ -37,7 +37,7 @@ class CfgMods
 		picture = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		hidePicture = 0;
 		hideName = 0;
-		action = "http://www.dayzmod.com";
+		action = "http://www.dayzamp.com";
 		version = "1.7.2.6.01";
 		hiveVersion = 0.96;
 	};
@@ -2938,8 +2938,8 @@ class CfgLoot
 		{ "TrashTinCan","TrashJackDaniels","ItemSodaEmpty","ItemSodaCoke","ItemSodaPepsi","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta","8Rnd_9x18_Makarov","7Rnd_45ACP_1911","2Rnd_shotgun_74Slug","2Rnd_shotgun_74Pellets","ItemBandage","ItemPainkiller" },
 		{ 0.09,0.09,0.09,0.12,0.09,0.05,0.05,0.05,0.05,0.07,0.05,0.05,0.05,0.06,0.06 }};
 	food[] = {
-		{ "TrashTinCan","TrashJackDaniels","ItemSodaEmpty","ItemSodaCoke","ItemSodaPepsi","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta","ItemBandage" },
-		{ 0.13,0.13,0.13,0.09,0.13,0.09,0.09,0.09,0.09,0.04 }};
+		{ "TrashTinCan","TrashJackDaniels","ItemSodaEmpty","ItemSodaCoke","ItemSodaPepsi","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta","ItemBandage","FoodBioMeat" },
+		{ 0.13,0.13,0.13,0.09,0.13,0.09,0.09,0.09,0.09,0.04,0.01 }};
 	generic[] = {
 		{ "TrashTinCan","ItemSodaEmpty","ItemSodaCoke","ItemSodaPepsi","TrashJackDaniels","FoodCanBakedBeans","FoodCanSardines","FoodCanFrankBeans","FoodCanPasta","ItemWaterbottleUnfilled","ItemWaterbottle","ItemBandage","7Rnd_45ACP_1911","5x_22_LR_17_HMR","10x_303","6Rnd_45ACP","2Rnd_shotgun_74Slug","2Rnd_shotgun_74Pellets","8Rnd_9x18_Makarov","15Rnd_W1866_Slug","BoltSteel","HandRoadFlare","ItemPainkiller","HandChemGreen","HandChemBlue","HandChemRed","ItemHeatPack" },
 		{ 0.06,0.06,0.06,0.04,0.04,0.01,0.01,0.01,0.01,0.01,0.01,0.11,0.03,0.01,0.04,0.04,0.05,0.05,0.09,0.02,0.04,0.07,0.02,0.01,0.03,0.03,0.04 }};
@@ -3140,7 +3140,7 @@ class CfgBuildingLoot
 
 	class DynamicDebris: Default
 	{
-		lootChance = 0.6;
+		lootChance = 0.4;
 		minRoaming = 0;
 		maxRoaming = 2;
 		zombieChance = 0;
@@ -3155,6 +3155,7 @@ class CfgBuildingLoot
 			{ "ItemKnife","generic" },
 			{ "ItemMatchbox","generic" },
 			{ "","generic" },
+			{ "","food" },
 			{ "WeaponHolder_PartGeneric","object" },
 			{ "WeaponHolder_PartWheel","object" },
 			{ "WeaponHolder_PartFueltank","object" },
@@ -3162,7 +3163,7 @@ class CfgBuildingLoot
 			{ "WeaponHolder_PartGlass","object" },
 			{ "WeaponHolder_PartVRotor","object" },
 			{ "WeaponHolder_ItemJerrycan","object" }};
-			itemChance[] = {0.15,0.01,0.05,0.02,0.02,0.05,0.02,0.05,0.05,0.1,0.2,0.1,0.1,0.1,0.05,0.05};
+			itemChance[] = {0.15,0.01,0.05,0.02,0.02,0.05,0.02,0.05,0.15,0.05,0.06,0.05,0.03,0.01,0.07,0.01,0.03};
 	};
 	class CargoContainer: Default
 	{

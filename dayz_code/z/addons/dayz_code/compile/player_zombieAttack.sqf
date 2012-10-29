@@ -3,7 +3,7 @@ _unit = _this;
 _vehicle = (vehicle player);
 
 _targets = _unit getVariable ["targets",[]];
-if (!(_vehicle in _targets)) exitWith {};
+if (!(_vehicle in _targets) && (random 1) > 0.5) exitWith {};
 
 //Do the attack
 _move = "ZombieStandingAttack1";
@@ -27,17 +27,46 @@ if (_vehicle != player) then {
 	_hpList = 	_vehicle call vehicle_getHitpoints;
 	_hp = 		_hpList call BIS_fnc_selectRandom;
 	_wound = 	getText(configFile >> "cfgVehicles" >> (typeOf _vehicle) >> "HitPoints" >> _hp >> "name");
-	_damage = 	random 0.03;
+	_total = 0;
 
-	[_unit,"hit",0,false] call dayz_zombieSpeak;
+	if(["Glass",_hp,false] call fnc_inString) then {
+		_damage = 0.5;
+		_strH = "hit_" + (_wound);
+		_dam = _vehicle getVariable [_strH,0];
+		_total = (_dam + _damage);
+	};
+	if(["Wheel",_hp,false] call fnc_inString) then {
+		_damage = 0.1;
+		_strH = "hit_" + (_wound);
+		_dam = _vehicle getVariable [_strH,0];
+		_total = (_dam + _damage);
+	};
+	if(["Body",_hp,false] call fnc_inString) then {
+		_damage = 0.05;
+		_strH = "hit_" + (_wound);
+		_dam = _vehicle getVariable [_strH,0];
+		_total = (_dam + _damage);
+	};
+	if(["Engine",_hp,false] call fnc_inString) then {
+		_damage = 0.03;
+		_strH = "hit_" + (_wound);
+		_dam = _vehicle getVariable [_strH,0];
+		_total = (_dam + _damage);
+	};
+	if(["Fuel",_hp,false] call fnc_inString) then {
+		[_unit,"hit",0,false] call dayz_zombieSpeak;
+		_damage = 0.03;
+		_strH = "hit_" + (_wound);
+		_dam = _vehicle getVariable [_strH,0];
+		_total = (_dam + _damage);
+	};
+	if(_total > 0) then {
+		[_unit,"hit",0,false] call dayz_zombieSpeak;
+		_result = [_vehicle, _wound,_total, _unit,"zombie"] call fnc_usec_damageVehicle;
+		dayzHitV =	[_vehicle,_wound,_total, _unit,"zombie"];
+		publicVariable "dayzHitV";
+	};
 
-	_strH = "hit_" + (_wound);
-	_dam = _vehicle getVariable [_strH,0];
-	_total = (_dam + _damage);
-	
-	_result = [_vehicle, _wound,_total, _unit,"zombie"] call fnc_usec_damageVehicle;
-	dayzHitV =	[_vehicle,_wound,_total, _unit,"zombie"];
-	publicVariable "dayzHitV";
 } else {
 	//Did he hit?
 	if ((_unit distance player) <= 3) then {
