@@ -6,7 +6,7 @@ Main goal: One DayZ based client and server build that will run on any arma2 map
 **Changes**
 ========================
 
-* Added - Rocket_DZ skin is now droppable.
+* Added - Rocket_DZ skin is now droppable drops on Helicopter crashes.
 * Added - Missing building loot and zombie spawns for many buildings on custom maps.
 * Added - Missing fuel tanks and water well for other map support.
 * Added - 50% chance that zombies will attack you in a vehicle. ( More damage will be done to Wheels and Glass less to Body, Engine, and Fuel.)
@@ -19,9 +19,8 @@ Main goal: One DayZ based client and server build that will run on any arma2 map
 * Removed - Some .RPT log spam client side related to zombie LOS checks.
 * Change - Allow dayz_maxLocalZombies to be set from the init.sqf mission file server side. If not set reverts to default 40.
 * Change - Vehicle repair enhancements by KK. http://killzonekid.com/arma2-dayz-repair-vehicle-fix-inc-leaking-hueys/
-* Change - Skin_Soldier1_DZ skin now drops on MilitarySpecial.
+* Change - Skin_Soldier1_DZ skin now drops on Military Special and Helicopter crashes.
 * Change - Bear Trap drops on Hunters.
-* Change - Skin_Rocket_DZ and Skin_Soldier1_DZ will now drop on Helicopter crashes.
 
 **Current Map Support**
 ========================
@@ -33,7 +32,6 @@ Main goal: One DayZ based client and server build that will run on any arma2 map
 * Woodland_ACR
 * Bootcamp_ACR
 * Shapur_BAF
-
 * Isla Duala
 * Dingor
 * Lingor
