@@ -3,7 +3,7 @@ _unit = _this;
 _vehicle = (vehicle player);
 
 _targets = _unit getVariable ["targets",[]];
-if (!(_vehicle in _targets) && (random 1) > 0.5) exitWith {};
+// if (!(_vehicle in _targets)) exitWith {};
 
 //Do the attack
 _move = "ZombieStandingAttack1";

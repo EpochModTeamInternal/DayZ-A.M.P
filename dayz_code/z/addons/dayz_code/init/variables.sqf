@@ -2,6 +2,7 @@ disableSerialization;
 
 //Model Variables
 Bandit1_DZ = 	"Bandit1_DZ";
+BanditW1_DZ = 	"BanditW1_DZ";
 Survivor1_DZ = 	"Survivor2_DZ";
 Survivor2_DZ = 	"Survivor2_DZ";
 SurvivorW2_DZ = "SurvivorW2_DZ";

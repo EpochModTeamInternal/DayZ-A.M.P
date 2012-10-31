@@ -29,7 +29,7 @@ HOTFIX : 27th OCTOBER 2012
 		* [FIXED] 	water can no longer be consumed if the player does not have in inventory.
 		* [UPDATED] 	Updated UI control.
 		* [NEW] 	Toolbox is now needed for all repiars.
-		* [NEW] 	New Combat System If you fire a weapon, someone fires a weapon near you, or a bullet/object impacts near you, then you go into combat.  During combat, "ABORT" is disabled.  If you ALT-F4/close anyway, your character is considered "combat logged" and instantly killed and leaves a body.
+		* [NEW] 	New Combat System If you fire a weapon, someone fires a weapon near you, or a bullet/object impacts near you, then you go into combat.  During combat, "ABORT" is disabled. (Need to look at the effects with high player counts)
 		* [NEW] 	Alt-f4 is now locked and will only open your status menu.
 		* [Fixed] 	No longer possible to drink/eat/pitch a tent/put on clothes/build sand bags/cat wire/hedgehogs/consume medical supplies/free filled water without consuming the item.
 		* [FIXED] 	No longer possible to create axes out of thin air if you already have one
@@ -42,6 +42,10 @@ HOTFIX : 27th OCTOBER 2012
 		* [FIXED] 	You can no longer generate multiple tents while packing up a deployed tent.
 		* [FIXED] 	You can no longer change clothes/eat/drink/etc. while in a vehicle
 		* [NEW] 	combat 30 sec timer.
+		* [UPDATED] 	ItemWire reduced from 0.06 to 0.01
+		* [UPDATED] 	PartEngine updated from 0.01 to 0.06
+		* [UPDATED] 	Version info is now displayed correct
+
 
 	Server.pbo
 		* [FIXED] 	Object Gear syncs happen based on radius not just on menu.
@@ -51,11 +55,13 @@ _____________________________________
 HOTFIX : 6 SEPTEMBER 2012
 
 	Affected addons:
+		* dayz 			1.something.somethingelse
 		* dayz_code		1.7.2.6
 		* dayz_server 	(server admins only)
 	
 	Developer's Note: 
 		* To change your DayZ UI options, go to OPTIONS > GAME OPTIONS > DayZ UI. This will only affect the DayZ UI elements, unfortunately it is not saving to the config file so each time you restart ArmA2 you will need to change this setting.
+		* DayZ UI Debug option might not always work properly. deal-with-it.jpg
 
 	Changelog:
 		* [NEW] 	Bear trap has chance to spawn on infected hunters

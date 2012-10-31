@@ -2410,6 +2410,7 @@ class CfgMovesBasic
 		{
 			throwGrenade = "AmovPercMrunSnonWnonDf_AmovPercMstpSnonWnonDnon_gthThrow";
 			salute = "";
+			die = "CzmbAdthPercMrunSnonWnonDf";
 		};
 		class CivilRunActionsF: CivilRunActions
 		{
@@ -2464,6 +2465,7 @@ class CfgMovesBasic
 			PlayerCrouch = "AmovPknlMwlkSnonWnonDf";
 			Crouch = "AmovPknlMwlkSnonWnonDf";
 			Up = "AmovPknlMwlkSnonWnonDf";
+			Die = "ZombieWalkingDeath";
 		};
 		class CivilWlkActionsFL: CivilWlkActionsF
 		{
@@ -28029,6 +28031,13 @@ class CfgMovesZombie: CfgMovesBasic
 {
 	skeletonName = "OFP2_ManSkeleton";
 	gestures = "CfgGesturesMale";
+	class Actions: Actions
+	{
+		class ZombieCrouchActions: CivilStandActions
+		{
+			die = "AdthPknlMstpSnonWnonDnon_2";
+		};
+	};
 	class States
 	{
 		class TransAnimBase: Default
@@ -28132,7 +28141,7 @@ class CfgMovesZombie: CfgMovesBasic
 			walkcycles = 3;
 			disableWeapons = "true";
 			ConnectTo[] = {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02};
-			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDf",0.025,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02};
+			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDf",0.025,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPknlMrunSnonWnonDf: AmovPknlMstpSnonWnonDnon
 		{
@@ -28383,45 +28392,57 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\dayz_anim\zmb\zmbStandAttack6";
 			speed = 1;
 			ConnectTo[] = {"AmovPercMstpSnonWnonDnon",0.02};
-			InterpolateTo[] = {};
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack2: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zmbStandAttack5";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack3: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zmbStandAttack4";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack4: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zmbStandAttack3";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack5: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_67-158";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack6: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_183-274";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack7: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_441-554";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack8: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_570-707";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack9: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_742-833";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
 		class ZombieStandingAttack10: ZombieStandingAttack1
 		{
 			file = "\dayz_anim\zmb\zombie_staticAttack3_855-987";
+			InterpolateTo[] = {"AdthPercMstpSnonWnonDnon_1",0.01};
 		};
-		class ZombieFeed: CutSceneAnimationBase{};
+		class ZombieFeed: CutSceneAnimationBase
+		{
+			actions = "ZombieCrouchActions";
+		};
 		class ZombieFeed1: ZombieFeed
 		{
 			file = "\dayz_anim\zmb\zmbKneel_feedA";
@@ -30724,7 +30745,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDfl";
 			speed = 0.810811;
 			ConnectTo[] = {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02};
-			InterpolateTo[] = {"AmovPercMrunSnonWnonDf",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDfl",0.025,"AmovPercMrunSnonWnonDl",0.025,"AmovPknlMrunSnonWnonDfl",0.03,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02,"AmovPercMevaSnonWnonDfl",0.02};
+			InterpolateTo[] = {"AmovPercMrunSnonWnonDf",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDfl",0.025,"AmovPercMrunSnonWnonDl",0.025,"AmovPknlMrunSnonWnonDfl",0.03,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02,"AmovPercMevaSnonWnonDfl",0.02,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDl: AmovPercMrunSnonWnonDfl
 		{
@@ -30732,7 +30753,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDl";
 			speed = 0.810811;
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPercMrunSnonWnonDfl",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDl",0.025,"AmovPercMrunSnonWnonDbl",0.025,"AmovPknlMrunSnonWnonDl",0.03};
+			InterpolateTo[] = {"AmovPercMrunSnonWnonDfl",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDl",0.025,"AmovPercMrunSnonWnonDbl",0.025,"AmovPknlMrunSnonWnonDl",0.03,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDbl: AmovPercMrunSnonWnonDl
 		{
@@ -30740,7 +30761,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDbl";
 			speed = 0.810811;
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDbl",0.025,"AmovPercMrunSnonWnonDl",0.025,"AmovPercMrunSnonWnonDb",0.025,"AmovPknlMrunSnonWnonDbl",0.03};
+			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDbl",0.025,"AmovPercMrunSnonWnonDl",0.025,"AmovPercMrunSnonWnonDb",0.025,"AmovPknlMrunSnonWnonDbl",0.03,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDb: AmovPercMrunSnonWnonDl
 		{
@@ -30748,7 +30769,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDb";
 			speed = 0.857143;
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDb",0.025,"AmovPercMrunSnonWnonDbl",0.025,"AmovPercMrunSnonWnonDbr",0.025,"AmovPknlMrunSnonWnonDb",0.03};
+			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDb",0.025,"AmovPercMrunSnonWnonDbl",0.025,"AmovPercMrunSnonWnonDbr",0.025,"AmovPknlMrunSnonWnonDb",0.03,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDbr: AmovPercMrunSnonWnonDl
 		{
@@ -30756,7 +30777,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDbr";
 			speed = 0.857143;
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDbr",0.025,"AmovPercMrunSnonWnonDb",0.025,"AmovPknlMrunSnonWnonDbr",0.03};
+			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDbr",0.025,"AmovPercMrunSnonWnonDb",0.025,"AmovPknlMrunSnonWnonDbr",0.03,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDr: AmovPercMrunSnonWnonDl
 		{
@@ -30764,7 +30785,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDr";
 			speed = 0.882353;
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDr",0.025,"AmovPercMrunSnonWnonDfr",0.025,"AmovPknlMrunSnonWnonDr",0.03};
+			InterpolateTo[] = {"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMwlkSnonWnonDr",0.025,"AmovPercMrunSnonWnonDfr",0.025,"AmovPknlMrunSnonWnonDr",0.03,"CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPercMrunSnonWnonDfr: AmovPercMrunSnonWnonDl
 		{
@@ -30772,7 +30793,7 @@ class CfgMovesZombie: CfgMovesBasic
 			file = "\ca\Anims\Characters\data\Anim\Sdr\Mov\Erc\run\non\non\AmovPercMrunSnonWnonDfr";
 			speed = 0.882353;
 			ConnectTo[] = {"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02};
-			InterpolateTo[] = {"AmovPercMwlkSnonWnonDfr",0.025,"AmovPercMrunSnonWnonDf",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMrunSnonWnonDr",0.025,"AmovPknlMrunSnonWnonDfr",0.03,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02,"AmovPercMevaSnonWnonDfr",0.02};
+			InterpolateTo[] = {"AmovPercMwlkSnonWnonDfr",0.025,"AmovPercMrunSnonWnonDf",0.025,"AmovPercMstpSnonWnonDnon",0.02,"AmovPercMrunSnonWnonDr",0.025,"AmovPknlMrunSnonWnonDfr",0.03,"AmovPercMsprSnonWnonDf_AmovPpneMstpSnonWnonDnon",0.02,"AmovPercMevaSnonWnonDfr",0.02,"","CzmbAdthPercMrunSnonWnonDf",0.01};
 		};
 		class AmovPknlMwlkSlowWrflDf: AmovPknlMstpSlowWrflDnon
 		{
@@ -32563,7 +32584,7 @@ class CfgMovesZombie: CfgMovesBasic
 			relSpeedMax = 1.09651;
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDfl",0.025,"AmovPpneMrunSnonWnonDfr",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDfl",0.025,"AmovPpneMrunSnonWnonDfr",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05,"AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDfl: AmovPpneMrunSnonWnonDf
 		{
@@ -32576,7 +32597,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDf",0.025,"AmovPpneMrunSnonWnonDl",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDf",0.025,"AmovPpneMrunSnonWnonDl",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05,"AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDl: AmovPpneMrunSnonWnonDf
 		{
@@ -32589,7 +32610,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDfl",0.025,"AmovPpneMrunSnonWnonDbl",0.025};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDfl",0.025,"AmovPpneMrunSnonWnonDbl",0.025,"","AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDbl: AmovPpneMrunSnonWnonDf
 		{
@@ -32602,7 +32623,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDl",0.025,"AmovPpneMrunSnonWnonDb",0.025};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDl",0.025,"AmovPpneMrunSnonWnonDb",0.025,"AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDb: AmovPpneMrunSnonWnonDf
 		{
@@ -32615,7 +32636,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDbl",0.025,"AmovPpneMrunSnonWnonDbr",0.025};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDbl",0.025,"AmovPpneMrunSnonWnonDbr",0.025,"","AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDbr: AmovPpneMrunSnonWnonDf
 		{
@@ -32628,7 +32649,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDb",0.025,"AmovPpneMrunSnonWnonDr",0.025};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDb",0.025,"AmovPpneMrunSnonWnonDr",0.025,"","AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDr: AmovPpneMrunSnonWnonDf
 		{
@@ -32641,7 +32662,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDbr",0.025,"AmovPpneMrunSnonWnonDfr",0.025};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDbr",0.025,"AmovPpneMrunSnonWnonDfr",0.025,"AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class AmovPpneMrunSnonWnonDfr: AmovPpneMrunSnonWnonDf
 		{
@@ -32654,7 +32675,7 @@ class CfgMovesZombie: CfgMovesBasic
 			soundEnabled = "true";
 			canPullTrigger = "false";
 			ConnectTo[] = {};
-			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDf",0.025,"AmovPpneMrunSnonWnonDr",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05};
+			InterpolateTo[] = {"AmovPpneMstpSnonWnonDnon",0.02,"AmovPpneMrunSnonWnonDf",0.025,"AmovPpneMrunSnonWnonDr",0.025,"AmovPpneMstpSnonWnonDnon_AmovPercMsprSnonWnonDf",0.05,"","AdthPpneMstpSnonWnonDnon",0.01};
 		};
 		class WeaponMagazineReloadStand: Default
 		{
@@ -37303,6 +37324,18 @@ class CfgMovesZombie: CfgMovesBasic
 			canPullTrigger = "false";
 			onLandEnd = "true";
 			looped = "false";
+			ConnectTo[] = {"DeadState",1.0};
+			InterpolateTo[] = {};
+		};
+		class CzmbAdthPercMrunSnonWnonDf: AdthPercMstpSlowWrflDnon_1
+		{
+			file = "\dayz_anim\zmb\zombie_runDeaths6";
+			speed = 0.8;
+			looped = "false";
+			equivalentTo = "";
+			ArrayVariable_1194 = "";
+			ArrayVariable_1193 = "";
+			ArrayVariable_1192 = "";
 			ConnectTo[] = {"DeadState",1.0};
 			InterpolateTo[] = {};
 		};
