@@ -12,6 +12,7 @@ _dog removeAction _actionWarn;
 if (_watchDog) then {
 	_actionWarn = _dog addAction ["Quiet",_actionDir + "warn.sqf",[_handle,false], 2, false, true];
 	_handle setFSMVariable ["_actionWarn",_actionWarn];
+	_handle setFSMVariable ["_idleTime",5];
 	while {_watchDog and alive _dog} do {
 		_watchDog = _handle getFSMVariable "_watchDog";
 		_senseSkill = _handle getFSMVariable "_senseSkill";
@@ -33,6 +34,7 @@ if (_watchDog) then {
 		sleep 2;
 	};
 } else {
-	_actionWarn = _dog addAction ["Warn",_actionDir + "warn.sqf",[_handle,true], 2, false, true];
+	_actionWarn = _dog addAction ["Alert",_actionDir + "warn.sqf",[_handle,true], 2, false, true];
 	_handle setFSMVariable ["_actionWarn",_actionWarn];
+	_handle setFSMVariable ["_idleTime",1];
 };

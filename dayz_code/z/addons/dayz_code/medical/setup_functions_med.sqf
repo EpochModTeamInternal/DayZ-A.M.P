@@ -51,13 +51,11 @@ fnc_usec_damageUnconscious = {
 				_unit action ["eject", _veh];
 				waitUntil{((vehicle _this) != _this)};
 				sleep 1;
-				_unit setCaptive true;
 				_unit setVariable ["NORRN_unconscious", true, true];
 				_unit playActionNow "Die";
 			};
 		};
 	} else {
-		_unit setCaptive true;
 		_unit setVariable ["NORRN_unconscious", true, true];
 		_unit playActionNow "Die";
 	};

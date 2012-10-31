@@ -4,13 +4,20 @@ call gear_ui_init;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {cutText [(localize "str_player_21") , "PLAIN DOWN"]};
 
+if (vehicle player != player) exitWith {cutText ["You may not eat while in a vehicle", "PLAIN DOWN"]};
+
 _item = _this;
-player playActionNow "PutDown";
-player removeMagazine _item;
-sleep 1;
+_hasfoodmag = _this in magazines player;
+
 _config =	configFile >> "CfgMagazines" >> _item;
 _text = 	getText (_config >> "displayName");
 _regen = 	getNumber (_config >> "bloodRegen");
+
+if (!_hasfoodmag) exitWith {cutText [format[(localize "str_player_31"),_text,"consume"] , "PLAIN DOWN"]};
+
+player playActionNow "PutDown";
+player removeMagazine _item;
+sleep 1;
 
 r_player_blood = r_player_blood + _regen;
 if (r_player_blood > r_player_bloodTotal) then {

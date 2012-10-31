@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_selfActions.sqf";
 	- Function
 	- [] call fnc_usec_selfActions;
 ************************************************************/
-private["_menClose","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_vehicle","_inVehicle","_color","_part","_type","_nameType"];
+private["_menClose","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_vehicle","_inVehicle","_color","_part"];
 
 _vehicle = vehicle player;
 _inVehicle = (_vehicle != player);
@@ -16,6 +16,7 @@ _hasFuelE = 	"ItemJerrycanEmpty" in magazines player;
 _hasRawMeat = 	"FoodSteakRaw" in magazines player;
 _hasKnife = 	"ItemKnife" in items player;
 _hasToolbox = 	"ItemToolbox" in items player;
+//_hasTent = 		"ItemTent" in items player;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 _nearLight = 	nearestObject [player,"LitObject"];
 _canPickLight = false;
@@ -41,7 +42,7 @@ if (_canPickLight and !dayz_hasLight) then {
 	s_player_removeflare = -1;
 };
 
-if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 3)) then {	//Has some kind of target
+if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4)) then {	//Has some kind of target
 	_isHarvested = cursorTarget getVariable["meatHarvested",false];
 	_isVehicle = cursorTarget isKindOf "AllVehicles";
 	_isMan = cursorTarget isKindOf "Man";
@@ -105,6 +106,14 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 3))
 		s_player_fireout = -1;
 	};
 	
+	//place tent
+	//if(_hasTent and _canDo) then {
+	//		s_player_placetent = player addAction [localize "Place Tent", "\z\addons\dayz_code\actions\tent_pitch.sqf",cursorTarget, 0, false, true, "", ""];
+	//} else {
+	//	player removeAction s_player_placetent;
+	//	s_player_placetent = -1;
+	//};
+	
 	//Packing my tent
 	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
@@ -115,8 +124,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 3))
 		s_player_packtent = -1;
 	};
 	
-	//Repairing Vehicles KK style
-	if ((dayz_myCursorTarget != cursorTarget) and !_isMan) then {
+	//Repairing Vehicles
+	if ((dayz_myCursorTarget != cursorTarget) and !_isMan and _hasToolbox) then {
 		_vehicle = cursorTarget;
 		{dayz_myCursorTarget removeAction _x} forEach s_player_repairActions;s_player_repairActions = [];
 		dayz_myCursorTarget = _vehicle;
@@ -138,15 +147,19 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 3))
 			if(["Engine",_x,false] call fnc_inString) then {
 				_part = "PartEngine";
 			};
+					
 			if(["HRotor",_x,false] call fnc_inString) then {
 				_part = "PartVRotor"; //yes you need PartVRotor to fix HRotor LOL
 			};
+
 			if(["Fuel",_x,false] call fnc_inString) then {
 				_part = "PartFueltank";
 			};
+			
 			if(["Wheel",_x,false] call fnc_inString) then {
 				_part = "PartWheel";
 			};	
+					
 			if(["Glass",_x,false] call fnc_inString) then {
 				_part = "PartGlass";
 			};
@@ -163,12 +176,11 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 3))
 				_handle = dayz_myCursorTarget addAction [_string, "\z\addons\dayz_code\actions\repair.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
 				s_player_repairActions set [count s_player_repairActions,_handle];
 			};
-		} forEach _hitpoints;
 			
+		} forEach _hitpoints;
 		if (_allFixed) then {
 			_vehicle setDamage 0;
 		};
-			
 	};
 	
 	if (_isMan and !_isAlive and !_isZombie) then {

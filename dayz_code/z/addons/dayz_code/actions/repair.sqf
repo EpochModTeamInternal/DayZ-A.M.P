@@ -1,5 +1,4 @@
-//KK repairs v2.0+
-private["_vehicle","_part","_hitpoint","_type","_selection","_array","_namePart","_nameType","_id","_damage","_allFixed","_totaldam"];
+private["_vehicle","_part","_hitpoint","_type","_selection","_array"];
 _id = _this select 2;
 _array = 	_this select 3;
 _vehicle = 	_array select 0;
@@ -7,11 +6,15 @@ _part =		_array select 1;
 _hitpoint = _array select 2;
 _type = typeOf _vehicle; 
 
-//moving this here because we need to know which part needed if we don't have it
+//
+_hasToolbox = 	"ItemToolbox" in items player;
+_section = _part in magazines player;
+
+// moving this here because we need to know which part needed if we don't have it
 _nameType = 		getText(configFile >> "cfgVehicles" >> _type >> "displayName");
 _namePart = 		getText(configFile >> "cfgMagazines" >> _part >> "displayName");
 
-if (_part in magazines player) then {
+if (_section and _hasToolbox) then {
 
 	_damage = [_vehicle,_hitpoint] call object_getHit;
 	_vehicle removeAction _id;
@@ -51,13 +54,9 @@ dayz_myCursorTarget = objNull;
 //check if repaired fully
 _hitpoints = _vehicle call vehicle_getHitpoints;
 _allFixed = true;
-// Total damage
-_totaldam = 0;
 {
 	_damage = [_vehicle,_x] call object_getHit;
 	if (_damage > 0) exitWith {
-		// add up total damage 
-		_totaldam = _totaldam + _damage;
 		_allFixed = false;
 	};
 } forEach _hitpoints;

@@ -4,10 +4,16 @@ call gear_ui_init;
 _onLadder =		(getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> (animationState player) >> "onLadder")) == 1;
 if (_onLadder) exitWith {cutText [(localize "str_player_21") , "PLAIN DOWN"]};
 
+if (vehicle player != player) exitWith {cutText ["You may not drink while in a vehicle", "PLAIN DOWN"]};
+
 _item = _this;
+_hasdrinkitem = _this in magazines player;
+
 _config = configFile >> "CfgMagazines" >> _item;
 _text = getText (_config >> "displayName");
 _sfx = 	getText (_config >> "sfx");
+
+if (!_hasdrinkitem) exitWith {cutText [format[(localize "str_player_31"),_text,"drink"] , "PLAIN DOWN"]};
 
 player playActionNow "PutDown";
 player removeMagazine _item;
