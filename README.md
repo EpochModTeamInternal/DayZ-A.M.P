@@ -63,7 +63,7 @@ Place @DayZ_AMP folder into your "arma 2 operation arrowhead" folder and launch 
 * Lingor Island Download link: http://www.icebreakr.info/lingor/download/
 	* Required mods: @DayZ_AMP;@lingor;
 * Dingor Island Download link: http://www.icebreakr.info/dingor/download/
-	*Required mods: @DayZ_AMP;@lingor;@dingor;
+	* Required mods: @DayZ_AMP;@lingor;@dingor;
 * Isla Duala Island Download link: http://www.icebreakr.info/isla-duala/download/
 	* Required mods: @DayZ_AMP;@duala;
 
