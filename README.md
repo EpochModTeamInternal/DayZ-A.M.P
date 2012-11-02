@@ -57,26 +57,15 @@ Main Features:
 
 Place @DayZ_AMP folder into your "arma 2 operation arrowhead" folder and launch Arma2 OA latest beta with "@DayZ_AMP;" in your mod line.
 
-**Lingor**
+**Custom Maps**
 =======================
 
-* Lingor Island Download links are here: http://www.icebreakr.info/lingor/download/
-** Required mods: @DayZ_AMP;@lingor;
-
-
-**Dingor**
-=======================
-
-Dingor Island Download links are here: http://www.icebreakr.info/dingor/download/
-
-Required mods: @DayZ_AMP;@lingor;@dingor;
-
-**Isla Duala**
-=======================
-
-Dingor Island Download links are here: http://www.icebreakr.info/isla-duala/download/
-
-Required mods: @DayZ_AMP;@duala;
+* Lingor Island Download link: http://www.icebreakr.info/lingor/download/
+	* Required mods: @DayZ_AMP;@lingor;
+* Dingor Island Download link: http://www.icebreakr.info/dingor/download/
+	*Required mods: @DayZ_AMP;@lingor;@dingor;
+* Isla Duala Island Download link: http://www.icebreakr.info/isla-duala/download/
+	* Required mods: @DayZ_AMP;@duala;
 
 __________________________________________________________
 
