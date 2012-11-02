@@ -18,7 +18,6 @@ Main Features:
 * Added - Rocket_DZ skin is now droppable drops on Helicopter crashes.
 * Added - Missing building loot and zombie spawns for many buildings on custom maps.
 * Added - Missing fuel tanks and water well for any map support.
-* Added - Zombies will attack you in a vehicle. ( More damage will be done to Wheels and Glass less to Body, Engine, and Fuel.)
 * Added - New rare canned meat product with 1600 health regen.
 * Removed - All static debris. This is to allow mission placed objects and/or server side dynamic debris system.
 * Removed - All banned classes.
@@ -31,6 +30,7 @@ Main Features:
 
 **Server Side Changes**
 ========================
+* Added - Spawning in random location if joining from another instance in the private hive.
 * Added - Randomly placed vehicle spawns on roads and around buildings.
 * Added - Dynamic road debris with loot piles. Control how many spawn with "MaxDynamicDebris" variable inside the mission init.sqf.
 * Added - to mission init.sqf variables "spawnShoremode" 1 for on shore 0 for anywhere and "spawnArea" to control size of spawn area.
@@ -60,9 +60,9 @@ Place @DayZ_AMP folder into your "arma 2 operation arrowhead" folder and launch 
 **Lingor**
 =======================
 
-Lingor Island Download links are here: http://www.icebreakr.info/lingor/download/
+* Lingor Island Download links are here: http://www.icebreakr.info/lingor/download/
+** Required mods: @DayZ_AMP;@lingor;
 
-Required mods: @DayZ_AMP;@lingor@;
 
 **Dingor**
 =======================
