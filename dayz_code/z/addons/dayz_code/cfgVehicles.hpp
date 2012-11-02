@@ -235,6 +235,74 @@ class CfgVehicles {
 		transportFuel = 0;
 		nameSound = "fuelstation";
 	};
+	
+	// Lingor hangars
+	class land_ibr_hangar: House
+	{
+		model = "\ibr\ibr_hangars\ibr_hangar";
+		scope = 2;
+		vehicleClass = "ibr_hangars";
+		transportFuel = 0;
+		transportRepair = 0;
+		icon = "\ibr\ibr_hangars\icons\icon5.paa";
+		mapSize = 40;
+		displayName = "House";
+		destrType = "DestructBuilding";
+		armor = 1200;
+		class DestructionEffects: DestructionEffects
+		{
+			class Ruin1
+			{
+				simulation = "ruin";
+				type = "\ibr\ibr_hangars\ibr_hangar_ruins";
+				position = "";
+				intensity = 2;
+				interval = 1;
+				lifeTime = 1;
+			};
+		};
+		class MarkerLights
+		{
+			class WhiteBlinking
+			{
+				name = "svet1";
+				color[] = {0,0,0,0};
+				ambient[] = {0,0,0,0};
+				brightness = 0;
+				blinking = 0;
+			};
+		};
+		class AnimationSources
+		{
+			class doorf
+			{
+				source = "user";
+				animPeriod = 5;
+				initPhase = 0;
+			};
+		};
+		class UserActions
+		{
+			class Open_Gate
+			{
+				displayName = "Open Gate";
+				position = "handle1";
+				radius = 10.0;
+				onlyForPlayer = 0;
+				condition = "this animationPhase ""doorfanim"" < 0.5";
+				statement = "this animate [""doorfanim"", 1]";
+			};
+			class Close_Gate
+			{
+				displayName = "Close Gate";
+				position = "handle1";
+				radius = 10.0;
+				onlyForplayer = 0;
+				condition = "this animationPhase ""doorfanim"" > 0.5";
+				statement = "this animate [""doorfanim"",0]";
+			};
+		};
+	};
 
 	class Land_Ind_MalyKomin: House
 	{

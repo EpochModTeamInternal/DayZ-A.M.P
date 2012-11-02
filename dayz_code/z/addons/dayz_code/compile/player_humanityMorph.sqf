@@ -51,8 +51,8 @@ if (count _medical > 0) then {
 	
 	//Add fractures
 	_fractures = (_medical select 9);
-	player setVariable ["hit_legs",(_fractures select 0),true];
-	player setVariable ["hit_hands",(_fractures select 1),true];
+	[player,"legs", (_fractures select 0)] call object_setHit;
+	[player,"hands", (_fractures select 1)] call object_setHit;
 } else {
 	//Reset Fractures
 	player setVariable ["hit_legs",0,true];
@@ -60,8 +60,7 @@ if (count _medical > 0) then {
 	player setVariable ["USEC_injured",false,true];
 	player setVariable ["USEC_inPain",false,true];	
 };
-if (r_fracture_legs) then { player setHit["legs",1]; };
-if (r_fracture_arms) then { player setHit["hands",1]; };
+
 
 //General Stats
 player setVariable["humanity",_humanity,true];
@@ -69,7 +68,7 @@ player setVariable["zombieKills",_zombieKills,true];
 player setVariable["headShots",_headShots,true];
 player setVariable["humanKills",_humanKills,true];
 player setVariable["banditKills",_banditKills,true];
-player setVariable["characterID",str(_charID),true];
+player setVariable["characterID",_charID,true];
 player setVariable["worldspace",_worldspace,true];
 
 dayzPlayerMorph = [_charID,player,_playerUID,[_zombieKills,_headShots,_humanKills,_banditKills],_humanity];
@@ -81,6 +80,10 @@ if (isServer) then {
 call dayz_resetSelfActions;
 
 eh_player_killed = player addeventhandler ["FiredNear",{_this call player_weaponFiredNear;} ];
+
+//Combat logging
+_eh_combat_projectilenear = player addEventHandler ["IncomingFire",{_this call player_projectileNear;} ];
+//
 [player] call fnc_usec_damageHandle;
 player allowDamage true;
 

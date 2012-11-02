@@ -5,16 +5,14 @@ startLoadingScreen ["","DayZ_loadingScreen"];
 enableSaving [false, false];
 
 //REALLY IMPORTANT VALUES
-dayZ_hivePipe1 = 	"\\.\pipe\dayz";	//The named pipe
 dayZ_instance = 6;	//The instance
 hiveInUse	=	true;
-dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
 
 // AMP config
 spawnShoremode = 1; // Default = 1 (on shore)
-spawnArea= 1500; // Default = 1500
+spawnArea = 1500; // Default = 1500
 MaxHeliCrashes= 5; // Default = 5
 MaxVehicleLimit = 50; // Default = 50
 MaxDynamicDebris = 100; // Default = 100
@@ -58,9 +56,4 @@ if (!isDedicated) then {
 	//Run the player monitor
 	_id = player addEventHandler ["Respawn", {_id = [] spawn player_death;}];
 	_playerMonitor = 	[] execVM "\z\addons\dayz_code\system\player_monitor.sqf";	
-	
-	// Create burn effect for each helicopter wreck
-	{
-		nul = [_x, 2, time, false, false] spawn BIS_Effects_Burn;
-	} forEach allMissionObjects "UH1Wreck_DZ";
 };

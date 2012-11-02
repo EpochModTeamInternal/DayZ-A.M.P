@@ -17,43 +17,43 @@
 			<Original>On 12 March 2013, a prion disease\nand spreads among the worlds population\ntriggering a global pandemic</Original>
 			<English>On 12 March 2013, a prion disease\nand spreads among the worlds population\ntriggering a global pandemic</English>
 			<German>Am 12. Mä 2013 breitet sich\neine Prionenkrankheit unter der Weltbevölkerung aus\nund löst eine globale Pandemie aus</German>
-			<Russian>12 Марта 2013, прионное заболевание\nраспространяется на население всего земного шара\nвызывая общую пандемию</Russian>
+			<Russian>12 марта 2013 г., прионное заболевание\nраспространяется среди населения всего земного шара,\nвызывая общую пандемию</Russian>
 		</Key>
 		<Key ID="STR_INTRO_4">	<!-- use \n for linebreak (have them regularly!) -->
 			<Original>The disease causes proteins in the brain to be replaced with prions ceasing regular function</Original>
 			<English>The disease causes proteins in the brain to be replaced with prions ceasing regular function</English>
 			<German>Durch die Krankheit werden Proteine im Gehirn durch Prionen ersetzt, wodurch das Gehirn aussetzt</German>
-			<Russian>Болезнь вызывает изменения протеинов головного мозга заменяя их прионами влияющими на основные функции</Russian>
+			<Russian>Болезнь вызывает изменения протеинов головного мозга, заменяя их прионами, влияющими на основные функции</Russian>
 		</Key>
 		<Key ID="STR_INTRO_5">	<!-- use \n for linebreak (have them regularly!) -->
 			<Original>Most people progress to dementia and then death as the brain is replaced with ineffective sludge</Original>
 			<English>Most people they progress to dementia and then death as the brain is replaced with ineffective sludge</English>
 			<German>Die meisten verfallen in Demenz und sterben, während das Gehirn mit nutzlosem Matsch ersetzt wird</German>
-			<Russian>Большинство людей впали в слабоумие и умерли в то время как головной мозг заменялся бесполезной грязью</Russian>
+			<Russian>У большинства болезнь развивается в слабоумие и последующую смерть, так как мозг заменяется бесполезной грязью</Russian>
 		</Key>
 		<Key ID="STR_INTRO_6">	<!-- use \n for linebreak (have them regularly!) -->
 			<Original>86% of the worlds population die</Original>
 			<English>86% of the worlds population die</English>
 			<German>86% der Welbevölkerung sterben</German>
-			<Russian>86% населения погибли</Russian>
+			<Russian>86% населения погибает</Russian>
 		</Key>
 		<Key ID="STR_INTRO_7">	
 			<Original>Some survive with the disease in a chronic state.\nLacking regular brain function, they are scarely human. They are unable to communicate,\ndriven by insatiable desire for violence, and attracted to the scent of those uninfected</Original>
 			<English>Some survive with the disease in a chronic state.\nLacking regular brain function, they are scarely human. They are unable to communicate,\ndriven by insatiable desire for violence, and attracted to the scent of those uninfected</English>
 			<German>Einige überleben, mit der Krankheit in einem chronischen Zustand.\nOhne normale Gehirnaktivität sind sie kaum als Menschen zu bezeichnen. Sie können nicht kommunizieren.\nSie werden von einem unstillbaren Durst nach Gewalt getrieben und der Geruch der uninfizierten zieht sie an.</German>
-			<Russian>Некоторые выжили с этим заболеванием.\nНо в виду отсутствия основных функций головного мозга, они вряд ли остались людьми. Они не в состоянии общаться,\nдвижимые ненастным желанием насилия, их привлекает запах неинфицированных</Russian>
+			<Russian>Некоторые выживают с заболеванием в хронической стадии.\nНо в виду отсутствия основных функций головного мозга, они вряд ли остались людьми. Они не в состоянии общаться,\nдвижимые ненасытной жаждой насилия, и влекомые запахом неинфицированных</Russian>
 		</Key>
 		<Key ID="STR_INTRO_8">	
 			<Original>Society crumbles as the pandemic spreads rapidly</Original>
 			<English>Society crumbles as the pandemic spreads rapidly</English>
 			<German>Die Gesellschaft bricht durch die Verbreitung der Pandemie zusammen</German>
-			<Russian>Общество распадается в то время как пандемия быстро распространяется</Russian>
+			<Russian>Общество распадается с быстрым распространением пандемии.</Russian>
 		</Key>
 		<Key ID="STR_INTRO_9">	
 			<Original>You are one of the 2% who are not infected yet</Original>
 			<English>You are one of the 2% who are not infected yet</English>
 			<German>Du bist einer der 2% noch nicht infizierten Menschen</German>
-			<Russian>Вы один из 2% которые еще не инфицированы</Russian>
+			<Russian>Вы один из 2%, которые еще не инфицированы</Russian>
 		</Key>
 		<Key ID="STR_INTRO_10">	
 			<Original>THIS IS YOUR STORY</Original>
@@ -147,7 +147,7 @@
 			<Original>You cannot place a Tent here. The area must be flat, and free of other objects</Original>
 			<English>You cannot place a Tent here. The area must be flat, and free of other objects</English>
 			<German>Du kannst hier kein Zelt aufbauen. Der Untergrund muss flach und frei sein</German>
-			<Russian>Палатку нужно ставить на ровную поверхность, без объектов неподалеку.</Russian>
+			<Russian>Палатку нужно ставить на ровную поверхность, без объектов поблизости.</Russian>
 		</Key>
 		<Key ID="str_player_consumed">
 			<Original>You have consumed a %1</Original>
@@ -171,7 +171,7 @@
 			<Original>You cannot make a fireplace here. The area must be flat, and free of other objects</Original>
 			<English>You cannot make a fireplace here. The area must be flat, and free of other objects</English>
 			<German>Du kannst hier kein Feuer machen. Der Untergrund muss flach und frei sein</German>
-			<Russian>Костер нужно разводить на ровной поверхности, без объектов неподалеку.</Russian>
+			<Russian>Костер нужно разводить на ровной поверхности, без объектов поблизости.</Russian>
 		</Key>
 		<Key ID="str_fireplace_removed">
 			<Original>Fireplace has been removed</Original>
@@ -183,7 +183,7 @@
 			<Original>%1 has been gutted, %2 meat steaks now on the carcass</Original>
 			<English>%1 has been gutted, %2 meat steaks now on the carcass</English>
 			<German>Du hast %1 ausgenommen, %2 Stücke Fleisch sind im Kadaver</German>
-			<Russian>Вы разделали: %1, на животном есть кусков мяса: %2</Russian>
+			<Russian>Вы разделали: %1. Доступно кусков мяса: %2</Russian>
 		</Key>
 		<Key ID="str_medical_healing">
 			<Original>You are being healed</Original>
@@ -195,7 +195,7 @@
 			<Original>You have filled %1 bottles with water</Original>
 			<English>You have filled %1 bottles with water</English>
 			<German>Du hast %1 Flasche(n) mit Wasser gefüllt</German>
-			<Russian>Вы наполнили фляжек с водой: %1</Russian>
+			<Russian>Наполнено фляжек с водой: %1</Russian>
 		</Key>
 		<Key ID="str_player_02">
 			<Original>You have no empty water bottles</Original>
@@ -231,7 +231,7 @@
 			<Original>You last ate %2 minutes, and drank %3 minutes ago</Original>
 			<English>You last ate %2 minutes, and drank %3 minutes ago</English>
 			<German>Du hast zuletzt vor %2 Minuten gegessen und vor %3 Minuten getrunken</German>
-			<Russian>Последний прием пищи был %2 минут назад, воды %3 минут назад.</Russian>
+			<Russian>Последний раз вы ели %2 мин. назад, пили - %3 мин. назад.</Russian>
 		</Key>
 		<Key ID="str_player_08">
 			<Original>%1 Food and %2 water was used since your last login</Original>
@@ -243,7 +243,7 @@
 			<Original>You have filled %1 jerrycans with fuel</Original>
 			<English>You have filled %1 jerrycans with fuel</English>
 			<German>Du hast %1 Kanister mit Treibstoff gefüllt</German>
-			<Russian>Вы наполнили канистр топливом: %1</Russian>
+			<Russian>Наполнено топливом канистр: %1</Russian>
 		</Key>
 		<Key ID="str_player_10">
 			<Original>You have no empty jerry cans</Original>
@@ -255,31 +255,31 @@
 			<Original>You need to sit in the driver seat before you can repair this vehicle</Original>
 			<English>You need to sit in the driver seat before you can repair this vehicle</English>
 			<German>You need to sit in the driver seat before you can repair this vehicle</German>
-			<Russian>Вы должны побывать на месте водителя перед тем, как вы сможете приступить к ремонту.</Russian>
+			<Russian>Для ремонта требуется занять место водителя хотя бы раз.</Russian>
 		</Key>
 		<Key ID="str_player_12">
 			<Original>Please go to Player Selection Screen to continue in game</Original>
 			<English>Please go to Player Selection Screen to continue in game</English>
 			<German>Bitte gehe in die Rollenverteilung um weiterspielen zu können</German>
-			<Russian>Пожалуйста выйдите в окно выбора игрока, чтобы продолжить игру</Russian>
+			<Russian>Пожалуйста, выйдите в окно выбора игрока, чтобы продолжить игру</Russian>
 		</Key>
 		<Key ID="str_player_13">
 			<Original>Waiting for character to create</Original>
 			<English>Waiting for character to create</English>
 			<German>Warte auf den Spieler um zu erstellen</German>
-			<Russian>Пожалуйста выйдите в окно выбора игрока чтобы продолжить игру</Russian>
+			<Russian>Пожалуйста, выйдите в окно выбора игрока чтобы продолжить игру</Russian>
 		</Key>
 		<Key ID="str_player_14">
 			<Original>Retrying to Authenticate</Original>
 			<English>Retrying to Authenticate</English>
 			<German>Versuche erneut zu Authendifizieren</German>
-			<Russian>Пробуем авторизироваться</Russian>
+			<Russian>Попытка аутентификации</Russian>
 		</Key>
 		<Key ID="str_player_15">
 			<Original>Requesting Authentication</Original>
 			<English>Requesting Authentication</English>
 			<German>Empfange Authendifisierung</German>
-			<Russian>Запрос авторизации</Russian>
+			<Russian>Запрос аутентификации</Russian>
 		</Key>
 		<Key ID="str_player_16">
 			<Original>Waiting for server response</Original>
@@ -291,19 +291,19 @@
 			<Original>Server responded, creating character</Original>
 			<English>Server responded, creating character</English>
 			<German>Server antwortete, erstelle Charakter</German>
-			<Russian>Получен ответ от сервера, создаем персонажа</Russian>
+			<Russian>Получен ответ от сервера. Идет создание персонажа</Russian>
 		</Key>
 		<Key ID="str_player_18">
 			<Original>You are running an incorrect version of DAYZ_CODE, please download this file from dayzmod.com/downloads (You are running version %1 and the server is running version %2)</Original>
 			<English>You are running an incorrect version of DAYZ_CODE, please download this file from dayzmod.com/downloads (You are running version %1 and the server is running version %2)</English>
 			<German>Du hast eine falsche version von DAYZ_CODE, bitte lade dir die neuste version runter www.dayzmod.com/downloads</German>
-			<Russian>У вас запущена неверная версия DAYZ_CODE, пожалуйста, скачайте данный файл с dayzmod.com/downloads (Ваша версия %1, версия на сервере %2)</Russian>
+			<Russian>Вы используете неверную версию DAYZ_CODE, пожалуйста, скачайте данный файл с dayzmod.com/downloads (Ваша версия %1, версия на сервере %2)</Russian>
 		</Key>
     <Key ID="str_player_20">
       <Original>You must be near a water-source such as a pond or well to refill your water bottles</Original>
       <English>You must be near a water-source such as a pond or well to refill your water bottles</English>
       <German>Du musst in der nähe einer Wasserquelle wie z.B. einem Teich sein um deine Wasserflasche zu füllen</German>
-      <Russian>Вы должны находиться возле водоема или водокачки, чтобы наполнить свои фляги.</Russian>
+      <Russian>Вы должны находиться возле водоема или источника воды, чтобы наполнить свои фляги.</Russian>
     </Key>
       <Key ID="str_player_21">
         <Original>You cannot do this while you are on a ladder</Original>
@@ -315,7 +315,7 @@
         <Original>You must have wood in your inventory in order to create a fireplace</Original>
         <English>You must have wood in your inventory in order to create a fireplace</English>
         <German>Du brauchst Holz in deinem Inventar, um ein Feuer zu machen</German>
-        <Russian>У вас должны быть дрова, для того чтобы развести костер.</Russian>
+        <Russian>Для разведения костра у вас должны быть дрова.</Russian>
       </Key>     
       <Key ID="str_player_23">
         <Original>You must be in a forest and close to a tree to harvest wood.</Original>
@@ -345,91 +345,91 @@
         <Original>You have applied a heatpack to your body successfully.</Original>
         <English>You have applied a heatpack to your body successfully.</English>
         <German>You have applied a heatpack to your body successfully.</German>
-        <Russian>Вы успешно применили согревающий комплект для вашего тела.</Russian>
+        <Russian>Вы успешно применили на вашем теле согревающий комплект.</Russian>
       </Key>
       <Key ID="str_player_28">
         <Original>You cannot reload that combination, you need %1 %2 magazines.</Original>
         <English>You cannot reload that combination, you need %1 %2 magazines.</English>
         <German>You cannot reload that combination, you need %1 %2 magazines.</German>
-        <Russian>You cannot reload that combination, you need %1 %2 magazines.</Russian>
+        <Russian>Вы не можете перезарядить эту комбинацию. Вам необходимо иметь магазины %1 %2.</Russian>
       </Key>
       <Key ID="str_player_29">
         <Original>You have successfully reloaded %1 %2 magazines.</Original>
         <English>You have successfully reloaded %1 %2 magazines.</English>
         <German>You have successfully reloaded %1 %2 magazines.</German>
-        <Russian>You have successfully reloaded %1 %2 magazines.</Russian>
+        <Russian>Магазины %1 %2 перезаряжены.</Russian>
       </Key>
      <Key ID="str_player_30">
         <Original>%1 must be on your person to move it to/from your toolbelt.</Original>
         <English>%1 must be on your person to move it to/from your toolbelt.</English>
         <German>%1 must be on your person to move it to/from your toolbelt.</German>
-        <Russian>%1 must be on your person to move it to/from your toolbelt.</Russian>
+        <Russian>Для перемещения с/на пояс, предмет %1 должен быть у вас.</Russian>
       </Key>
       <Key ID="str_player_31">
         <Original>%1 must be in your main inventory to %2 it.</Original>
         <English>%1 must be in your main inventory to %2 it.</English>
         <German>%1 must be in your main inventory to %2 it.</German>
-        <Russian>%1 must be in your main inventory to %2 it.</Russian>
+        <Russian>Предмет %1 должен находиться в основном инвентаре чтобы %2 его.</Russian>
       </Key>
       <Key ID="str_player_beinglooted">
         <Original>%1 is already being looted by someone else.</Original>
         <English>%1 is already being looted by someone else.</English>
         <German>%1 is already being looted by someone else.</German>
-        <Russian>%1 is already being looted by someone else.</Russian>
+        <Russian>%1 уже кто-то обыскивает.</Russian>
       </Key>
       <Key ID="str_player_beingpacked">
         <Original>That tent is already being packed.</Original>
         <English>That tent is already being packed.</English>
         <German>That tent is already being packed.</German>
-        <Russian>Taht tent is already being packed.</Russian>
+        <Russian>Эту палатку уже упаковывают.</Russian>
       </Key>
 		<Key ID="str_player_studybody">
 			<Original>His name was %1, it appears he died from %2</Original>
 			<English>His name was %1, it appears he died from %2</English>
 			<German>%1 wurde von %2 getötet</German>
-			<Russian>Его звали %1, похоже что он умер %2</Russian>
+			<Russian>Его звали %1, похоже что он умер от %2</Russian>
 		</Key>
 		<Key ID="str_death_shothead">
 			<Original>a gunshot to the head</Original>
 			<English>a gunshot to the head</English>
 			<German>ein schuss auf den Kopf</German>
-			<Russian>от попадания пули в голову</Russian>
+			<Russian>попадания пули в голову</Russian>
 		</Key>
 		<Key ID="str_death_shotheavy">
 			<Original>a high calibre gunshot</Original>
 			<English>a high calibre gunshot</English>
 			<German>eine Großkalibrige Schrotflinte</German>
-			<Russian>от попадания пули большого калибра</Russian>
+			<Russian>попадания пули большого калибра</Russian>
 		</Key>
 		<Key ID="str_death_bled">
 			<Original>blood loss</Original>
 			<English>blood loss</English>
 			<German>blutverlust</German>
-			<Russian>от потери крови</Russian>
+			<Russian>потери крови</Russian>
 		</Key>
 		<Key ID="str_death_dehyd">
 			<Original>dehydration</Original>
 			<English>dehydration</English>
 			<German>dehydration</German>
-			<Russian>от обезвоживания</Russian>
+			<Russian>обезвоживания</Russian>
 		</Key>
 		<Key ID="str_death_starve">
 			<Original>starvation</Original>
 			<English>starvation</English>
 			<German>verhungern</German>
-			<Russian>от голода</Russian>
+			<Russian>голода</Russian>
 		</Key>
 		<Key ID="str_death_combatlog">
 			<Original>combat logging</Original>
 			<English>combat logging</English>
 			<German>combat logging</German>
-			<Russian>combat logging</Russian>
+			<Russian>выхода из игры в режиме боя</Russian>
 		</Key>
 		<Key ID="str_death_unknown">
 			<Original>an unknown cause</Original>
 			<English>an unknown cause</English>
 			<German>ein unbekannter Grund</German>
-			<Russian>от неизвестной причины</Russian>
+			<Russian>неизвестной причины</Russian>
 		</Key>
 	</Package>
   <Package name="ui">
@@ -475,7 +475,7 @@
 			<Original>Cook Meat</Original>
 			<English>Cook Meat</English>
 			<German>Fleisch zubereiten</German>
-			<Russian>Пожарить мясо</Russian>
+			<Russian>Приготовить мясо</Russian>
 		</Key>
 		<Key ID="str_actions_self_06">
 			<Original>Remove fireplace</Original>
@@ -487,7 +487,7 @@
 			<Original>Pack Tent</Original>
 			<English>Pack Tent</English>
 			<German>Zelt einpacken</German>
-			<Russian>Собрать палатку</Russian>
+			<Russian>Упаковать палатку</Russian>
 		</Key>
 		<Key ID="str_actions_self_08">
 			<Original>Drink Water</Original>

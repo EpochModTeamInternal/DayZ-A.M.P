@@ -5,19 +5,19 @@ startLoadingScreen ["","DayZ_loadingScreen"];
 enableSaving [false, false];
 
 //REALLY IMPORTANT VALUES
-dayZ_hivePipe1 = 	"\\.\pipe\dayz";	//The named pipe
 dayZ_instance = 2;	//The instance
 hiveInUse	=	true;
-dayzHiveRequest = [];
 initialized = false;
 dayz_previousID = 0;
 
-spawnShoremode = 0;
-spawnArea= 1000; 
+// AMP config
+spawnShoremode = 1; // Default = 1 (on shore)
+spawnArea= 1000; // Default = 1500
 MaxHeliCrashes= 2; // Default = 5
-HeliCrashArea= 2000; // default = 4000;
-DynamicDebrisModifier= 100; // Default = 1000 tries (only spawns on roads) 1000 works well for larger maps.
-DynamicDebrisArea= 2000; // default = 400;
+MaxVehicleLimit = 50; // Default = 50
+MaxDynamicDebris = 100; // Default = 100
+dayz_MapArea = 4000; // Default = 10000
+dayz_maxLocalZombies = 40; // Default = 40
 
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\init\variables.sqf";				//Initilize the Variables (IMPORTANT: Must happen very early)
 progressLoadingScreen 0.1;

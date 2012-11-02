@@ -36,7 +36,6 @@ if (isServer) then {
 	"dayzLoginRecord"	addPublicVariableEventHandler {_id = (_this select 1) spawn dayz_recordLogin};
 	"dayzCharSave"		addPublicVariableEventHandler {_id = (_this select 1) spawn server_playerSync};
 	"dayzCharDisco"		addPublicVariableEventHandler {_id = (_this select 1) spawn server_characterSync};
-	"dayz_logDamage"	addPublicVariableEventHandler {_id = (_this select 1) spawn server_logDamage};
 };
 
 //Client only

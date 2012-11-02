@@ -1,20 +1,20 @@
 /***********************************************************
 ASSIGN DAMAGE HANDLER TO A UNIT
-- Function
-- [unit] call fnc_usec_damageHandle;
+- Function set_EH
+- unit call set_EH;
 ************************************************************/
-private["_object","_eh1","_eh2","_dir","_location"];
-_object = _this select 0;
+private["_unit","_eh1","_eh2","_dir","_location"];
+_unit = _this;
+_dir = getdir _this;
 _location = getPosATL _this;
 
-diag_log ("vehicle_init");
-diag_log (_unit);
-
 //Assign event handlers
-_eh1 = _object addeventhandler ["HandleDamage",{if (local (_this select 0)) then {_this call set_obj_dmg}}];
-_eh2 = _object addeventhandler ["Killed",{if (local (_this select 0)) then {_this call vehicle_handleKilled }}];
+_eh1 = _unit addeventhandler ["HandleDamage",{ _this call vehicle_handleDamage } ];
+_eh2 = _unit addeventhandler ["Killed",{ _this call vehicle_handleKilled } ];
 
-//Publish to database/item management
-if (!isServer) then {
-	_eh3 = _object addEventHandler ["GetOut", {[(_this select 0),"position"] call vehicle_handleInteract;}];
+ //diag_log format ["set EH %1 for vehicle:%2", _eh1, typeOf _unit ];
+
+if (isServer) then {
+	_eh2 = _unit addEventHandler ["GetOut", {[(_this select 0),"all"] call server_updateObject;}];
+	_eh3 = _unit addEventHandler ["GetIn", {[(_this select 0),"all"] call server_updateObject;}];
 };

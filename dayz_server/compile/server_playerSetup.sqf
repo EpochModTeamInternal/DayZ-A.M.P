@@ -75,7 +75,7 @@ if (count _worldspace > 0) then {
 		_randomSpot = true;
 	};
 	
-	// Came from another server random spawn
+	// Came from another server force random spawn
 	if (_lastinstance != dayZ_instance) then {
 		_randomSpot = true;
 	}
@@ -180,6 +180,7 @@ if (_randomSpot) then {
 		endLoadingScreen;
 	};
 	
+	
 	//Spawn modify via mission init.sqf
 	if(isnil "spawnArea") then {
 		spawnArea = 1500;
@@ -187,7 +188,8 @@ if (_randomSpot) then {
 	if(isnil "spawnShoremode") then {
 		spawnShoremode = 1;
 	};
-	
+
+
 	//spawn into random
 	_findSpot = true;
 	_mkr = "";

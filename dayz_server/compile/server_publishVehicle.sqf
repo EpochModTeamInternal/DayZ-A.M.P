@@ -14,7 +14,7 @@ _dir = 		_worldspace select 0;
 _location = _worldspace select 1;
 
 //Generate UID
-_uid = _object call dayz_vehicleUID;
+_uid = _worldspace call dayz_objectUID2;
 // _uid = format["%1%2",dayZ_instance,_uid];
 
 if (getNumber(configFile >> "CfgVehicles" >> _class >> "isBicycle") != 1) then {

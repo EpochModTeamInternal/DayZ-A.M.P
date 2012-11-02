@@ -19,9 +19,9 @@ private["_unit","_magazine","_used","_quantity","_magsNet","_magsWhole","_key","
 	_evType = "";
 	_recordable = false;
 	
-	// Both the firer and those nearby (<=59m) go into "combat" to prevent ALT-F4
+	// Both the firer and those nearby (<=15m) go into "combat" to prevent ALT-F4
 	_firer setVariable["startcombattimer", 1, true];
-	if (_isPlayer) then {
+	if ((_isPlayer) and (_distance <= 15)) then {
 		_unit setVariable["startcombattimer", 1, true];
 	};
 

@@ -1,13 +1,21 @@
-private["_obj","_uid","_key"];
-//[dayz_characterID,_tent,[_dir,_location],"TentStorage"]
-_uid = 	_this call dayz_objectUID2;
+/*
+[_objectID,_objectUID] call local_deleteObj;
+*/
+private["_id","_uid","_key"];
+_id 	= _this select 0;
+_uid 	= _this select 1;
 
 if (isServer) then {
-//add to database
-	if (parseNumber _uid > 0) then {
-		//Send request
+//remove from database
+	if (parseNumber _id > 0) then {
+		//Send request by ID
+		_key = format["CHILD:304:%1:",_id];
+		_key call server_hiveWrite;
+		diag_log format["DELETE: Deleted by ID: %1",_id];
+	} else  {
+		//Send request by UID
 		_key = format["CHILD:310:%1:",_uid];
 		_key call server_hiveWrite;
+		diag_log format["DELETE: Deleted by UID: %1",_uid];
 	};
-	diag_log ("DELETE: Deleted " + str(_uid));
 };

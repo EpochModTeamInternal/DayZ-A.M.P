@@ -90,6 +90,7 @@ if(isnil "HeliCrashArea") then {
 	HeliCrashArea = dayz_MapArea / 2;
 };
 
+
 spawn_heliCrash = {
 	private["_position","_veh","_num","_config","_itemType","_itemChance","_weights","_index","_iArray"];
 	
@@ -429,17 +430,34 @@ server_getDiff2 =	{
 	_result
 };
 
+dayz_objectUID2 = {
+	private["_position","_dir","_key"];
+	_dir = _this select 0;
+	_key = "";
+	_position = _this select 1;
+	{
+		_x = _x * 10;
+		if ( _x < 0 ) then { _x = _x * -10 };
+		_key = _key + str(round(_x));
+	} forEach _position;
+	_key = _key + str(round(_dir));
+	_key
+};
+
 dayz_objectUID = {
-	private["_position","_p1","_p2","_p3","_dir","_key","_object"];
+	private["_position","_dir","_key","_object"];
 	_object = _this;
 	_position = getPosATL _object;
-	_p1 = round((_position select 0) * 10);
-	_p2 = round((_position select 1) * 10);
-	_p3 = round((_position select 2) * 10);
-	//_dir = round(direction _object);
-	_dir = round(getDir _object);
-	_key = format["%1%2%3%4",_p1,_p2,_p3,_dir];
+	_dir = direction _object;
+	_key = [_dir,_position] call dayz_objectUID2;
 	_key
+};
+
+dayz_recordLogin = {
+	private["_key"];
+	_key = format["CHILD:103:%1:%2:%3:",_this select 0,_this select 1,_this select 2];
+	diag_log ("HIVE: WRITE: "+ str(_key));
+	_key call server_hiveWrite;
 };
 
 dayz_vehicleUID = {
@@ -453,23 +471,4 @@ dayz_vehicleUID = {
 	_dir = _p4 + round(direction _object);
 	_key = _dir;
 	_key
-};
-
-dayz_objectUID2 = {
-	private["_position","_p1","_p2","_p3","_dir","_key"];
-	//_dir = _this select 0;
-	_dir = round(_this select 0);
-	_position = _this select 1;
-	_p1 = round((_position select 0) * 10);
-	_p2 = round((_position select 1) * 10);
-	_p3 = round((_position select 2) * 10);
-	_key = format["%1%2%3%4",_p1,_p2,_p3,_dir];
-	_key
-};
-
-dayz_recordLogin = {
-	private["_key"];
-	_key = format["CHILD:103:%1:%2:%3:",_this select 0,_this select 1,_this select 2];
-	diag_log ("HIVE: WRITE: "+ str(_key));
-	_key call server_hiveWrite;
 };

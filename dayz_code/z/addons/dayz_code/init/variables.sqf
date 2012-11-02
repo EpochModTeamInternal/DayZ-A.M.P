@@ -12,7 +12,6 @@ Soldier1_DZ = 	"Soldier1_DZ";
 Rocket_DZ = 	"Rocket_DZ";
 
 dayz_combatLog = "";
-dayz_logDamage = [];
 
 
 //Hunting Variables
