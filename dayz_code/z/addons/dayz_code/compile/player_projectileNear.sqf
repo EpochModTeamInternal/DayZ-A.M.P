@@ -4,10 +4,12 @@ _shooter =         _this select 1;
 _ammo =         _this select 2;
 _distance =        _this select 3;
 _position =        _this select 4;
+_projectile = 	_this select 6;
 
 _isInComat = _unit getVariable["startcombattimer",0];
+_endPos = getPosATL _projectile;
 
-_listNear = (_endPos) nearEntities [["CAManBase","AllVehicles"],50];
+_listNear = _unit nearEntities [["CAManBase","AllVehicles"],25];
 {
 	_nearVehicle = _x;
 	_isInCombat = _nearVehicle getVariable["startcombattimer",0];

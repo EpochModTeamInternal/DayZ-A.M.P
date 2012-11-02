@@ -114,8 +114,8 @@ link56[] = {49,50};
 link57[] = {50,49};
 link58[] = {51,52};
 link59[] = {52,29};
-globals[] = {25.000000,1,0,0,0,640,480,1,81,6316128,1,-454.478333,468.883942,1080.962280,499.872528,955,601,1};
-window[] = {2,-1,-1,-1,-1,846,66,1037,66,3,972};
+globals[] = {25.000000,1,0,0,0,640,480,1,81,6316128,1,-440.765930,455.171539,1392.221191,828.390381,955,601,1};
+window[] = {2,-1,-1,-1,-1,934,154,1125,154,3,972};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -557,6 +557,7 @@ class FSM
        "dayz_playerName = name player;" \n
        "_model call player_switchModel;" \n
        "" \n
+	   "player allowDamage false;" \n
        "_lastAte = _survival select 1;" \n
        "_lastDrank = _survival select 2;" \n
        "" \n

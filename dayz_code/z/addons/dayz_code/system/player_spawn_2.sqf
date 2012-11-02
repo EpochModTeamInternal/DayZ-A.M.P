@@ -285,9 +285,9 @@ while {true} do {
 	if (_combattimeout > 0) then {
 		_timeleft = _combattimeout - time;
 		if (_timeleft > 0) then {
-			hintSilent format["In Combat: %1",round(_timeleft)];
+			//hintSilent format["In Combat: %1",round(_timeleft)];
 		} else {
-			hintSilent "Not in Combat";
+			//hintSilent "Not in Combat";
 			player setVariable["combattimeout", 0, true];
 			dayz_combat = 0;
 			_combatdisplay = uiNamespace getVariable 'DAYZ_GUI_display';
@@ -295,7 +295,7 @@ while {true} do {
 			_combatcontrol ctrlShow true;
 		};
 	} else {
-		hintSilent "Not in Combat";
+		//hintSilent "Not in Combat";
 		dayz_combat = 0;
 		_combatdisplay = uiNamespace getVariable 'DAYZ_GUI_display';
 		_combatcontrol = 	_combatdisplay displayCtrl 1307;

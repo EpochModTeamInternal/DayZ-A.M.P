@@ -48,7 +48,7 @@ class RscXListBox;
 
 class RscDisplayGameOptions
 {
-	onLoad = "((_this select 0) displayCtrl 140) lbAdd 'Default';((_this select 0) displayCtrl 140) lbAdd 'Debug';((_this select 0) displayCtrl 140) lbAdd 'None';((_this select 0) displayCtrl 140) lbSetCurSel (uiNamespace getVariable ['DZ_displayUI', 0]);";
+	//onLoad = "((_this select 0) displayCtrl 140) lbAdd 'Default';((_this select 0) displayCtrl 140) lbAdd 'Debug';((_this select 0) displayCtrl 140) lbAdd 'None';((_this select 0) displayCtrl 140) lbSetCurSel (uiNamespace getVariable ['DZ_displayUI', 0]);";
 	onUnload = "call ui_changeDisplay;";
 	class controls
 	{
@@ -1068,12 +1068,11 @@ class RscTitles
 				w = 0.06;
 				h = 0.08;
 			};
-			class RscPicture_1207: RscPictureGUI
-			{
+			class RscPicture_1207 : RscPictureGUI {
 				idc = 1207;
-				text = "";
-				x = 0.955313 * safezoneW + safezoneX;
-				y = 0.65 * safezoneH + safezoneY;
+				text = "\z\addons\dayz_code\gui\status_combat_border_ca.paa";
+				x = "0.955313 * safezoneW + safezoneX";
+				y = "0.65 * safezoneH + safezoneY";
 				w = 0.06;
 				h = 0.08;
 			};
@@ -1178,6 +1177,14 @@ class RscTitles
 				text = "";
 				x = 0.935313 * safezoneW + safezoneX;
 				y = 0.37 * safezoneH + safezoneY;
+				w = 0.06;
+				h = 0.08;
+			};
+			class RscPicture_1307 : RscPictureGUI {
+				idc = 1307;
+				text = "\z\addons\dayz_code\gui\status_combat_inside_ca.paa";
+				x = "0.955313 * safezoneW + safezoneX";
+				y = "0.65 * safezoneH + safezoneY";
 				w = 0.06;
 				h = 0.08;
 			};

@@ -33,7 +33,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.dayzmod.com";
-		version = "1.7.3";
+		version = "1.7.3.1";
 		hiveVersion = 0.96; //0.93
 	};
 };
@@ -418,7 +418,6 @@ class CfgBuildingLoot {
 			{ "M16A2","weapon" },
 			{ "M16A2GL","weapon" },
 			{ "M9SD","weapon" },
-			{ "AK_47_M","weapon" },
 			{ "AK_74","weapon" },
 			{ "M4A1_Aim","weapon" },
 			{ "AKS_74_kobra","weapon" },
@@ -456,7 +455,6 @@ class CfgBuildingLoot {
 			0.05,
 			0.01,
 			0.02,
-			0.20,
 			0.15,
 			0.01,
 			0.08,
@@ -502,7 +500,6 @@ class CfgBuildingLoot {
 			{ "M249_DZ","weapon" },
 			{ "M9SD","weapon" },
 			{ "M136","weapon" },
-			{ "AK_47_M","weapon" },
 			{ "AK_74","weapon" },
 			{ "M4A1_Aim","weapon" },
 			{ "AKS_74_kobra","weapon" },
@@ -550,7 +547,6 @@ class CfgBuildingLoot {
 			0.01,
 			0.02,
 			0.01,
-			0.20,
 			0.10,
 			0.02,
 			0.10,

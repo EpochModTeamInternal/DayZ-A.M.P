@@ -459,16 +459,3 @@ dayz_recordLogin = {
 	diag_log ("HIVE: WRITE: "+ str(_key));
 	_key call server_hiveWrite;
 };
-
-dayz_vehicleUID = {
-	private["_position","_p1","_p2","_p3","_p4","_dir","_key","_object"];
-	_object = _this;
-	_position = getPosATL _object;
-	_p1 = dayZ_instance * 100000;
-	_p2 = _p1 + round((_position select 0) * 10);
-	_p3 = _p2 + round((_position select 1) * 10);
-	_p4 = _p3 + round((_position select 2) * 10);
-	_dir = _p4 + round(direction _object);
-	_key = _dir;
-	_key
-};

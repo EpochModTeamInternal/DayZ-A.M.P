@@ -15,6 +15,6 @@ _eh2 = _unit addeventhandler ["Killed",{ _this call vehicle_handleKilled } ];
  //diag_log format ["set EH %1 for vehicle:%2", _eh1, typeOf _unit ];
 
 if (isServer) then {
-	_eh2 = _unit addEventHandler ["GetOut", {[(_this select 0),"all"] call server_updateObject;}];
-	_eh3 = _unit addEventHandler ["GetIn", {[(_this select 0),"all"] call server_updateObject;}];
+	_eh3 = _unit addEventHandler ["GetOut", {[(_this select 0),"all"] call server_updateObject;}];
+	_eh4 = _unit addEventHandler ["GetIn", {[(_this select 0),"all"] call server_updateObject;}];
 };
