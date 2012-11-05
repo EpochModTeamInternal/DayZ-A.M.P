@@ -186,6 +186,7 @@ if(isDedicated) then {
 if(isServer) then {
 	dayz_players = [];
 	dead_bodyCleanup = [];
+	needUpdate_objects = [];
 };
 
 if(!isDedicated) then {

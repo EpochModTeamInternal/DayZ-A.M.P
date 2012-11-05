@@ -17,6 +17,7 @@ if ( typeName(_this) == "OBJECT" ) then {
 _character = 	_this select 0;
 _magazines =	_this select 1;
 _force = 		_this select 2;
+_force =	true;
 
 _doUpdate = 	false;
 _characterID =	_character getVariable ["characterID","0"];

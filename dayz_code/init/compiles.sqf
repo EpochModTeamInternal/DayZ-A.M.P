@@ -90,6 +90,22 @@ if (!isDedicated) then {
 	onPreloadStarted 			"dayz_preloadFinished = false;";
 	onPreloadFinished 			"dayz_preloadFinished = true;";
 	
+	// TODO: need move it in player_monitor.fsm
+	// allow player disconnect from server, if loading hang, kicked by BE etc.
+	[] spawn {
+		private["_timeOut"];
+		_timeOut = 0;
+		while { _timeOut < 90 } do {
+			_timeOut = _timeOut + 1;
+			sleep 1;
+		};
+		if ( !dayz_preloadFinished ) then {
+			endLoadingScreen;
+			disableUserInput false;
+			cutText ["Something went wrong! disconnect and try again!", "BLACK OUT",1];
+			player enableSimulation false;
+		};
+	}; 
 	dayz_losChance = {
 		private["_agent","_maxDis","_dis","_val","_maxExp","_myExp"];
 		_agent = 	_this select 0;
@@ -263,6 +279,7 @@ if (!isDedicated) then {
 			_control ctrlCommit 0;
 		};
 	};
+	
 
 	gear_ui_init = {
 		private["_control","_parent","_menu","_dspl","_grpPos"];

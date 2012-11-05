@@ -440,10 +440,10 @@
       <Russian>Выберите свой пол</Russian>
     </Key>
     <Key ID="STR_UI_GENDER_DESC">
-      <Original>Please select the gender you wish to play as. You CANNOT ever change this once you have selected it. Your gender will be bound to your CD-Key and cannot be reset, and will remain the same for EVERY new character you have.</Original>
-      <English>Please select the gender you wish to play as. You CANNOT ever change this once you have selected it. Your gender will be bound to your CD-Key and cannot be reset, and will remain the same for EVERY new character you have.</English>
-      <German>Bitte wählen Sie das Geschlecht, die Sie als zu spielen. Sie kann nie ändern, sobald Sie es ausgewählt haben. Ihr Geschlecht wird zu Ihrem CD-Key gebunden und kann nicht zurückgestellt werden, und werden die gleichen bleiben für jeden neuen Charakter haben.</German>
-      <Russian>Пожалуйста, выберите пол игрока. ВНИМАНИЕ! Пол выбирается только один раз с привязкой к ключу от вашей игры. Вы не сможете его изменить впоследствии, даже если начнете играть новым персонажем!</Russian>
+	  <Original>Please select the gender you wish to play as. Your gender will be bound to this unique character and cannot be changed until you die.</Original>
+	  <English>Please select the gender you wish to play as. Your gender will be bound to this unique character and cannot be changed until you die.</English>
+	  <German>Bitte wählen Sie das Geschlecht, die Sie als zu spielen. Ihr Geschlecht wird zu dieser einzigartigen Charakter gebunden und kann nicht geändert werden, bis Sie sterben.</German>
+	  <Russian>Пожалуйста, выберите пол вы хотите играть. Ваш пол будет связано с этим уникальным характером и не может быть изменено, пока не умрешь.</Russian>
     </Key>
     <Key ID="STR_UI_GENDER_MALE">
       <Original>MALE</Original>

@@ -79,7 +79,7 @@ class RscDisplayMain : RscStandardDisplay
 		};
 	};
 	
-	//onLoad = "((_this select 0) displayCtrl 138) ctrlEnable false;";
+	onLoad = "((_this select 0) displayCtrl 138) ctrlEnable false;";
 
 	class controls 
 	{
@@ -87,7 +87,7 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "DayZ 1.7.3";
+			text = "DayZ 1.7.4";
 			y = "(SafeZoneH + SafeZoneY) - (1 - 0.95)";
 		};
 		class CA_TitleMainMenu;
@@ -118,51 +118,50 @@ class RscDisplayGenderSelect
 	enableDisplay = 1;
 	class controls
 	{
-		class RscText_1000: RscText
+		class GenderPic_Man : RscActiveText
 		{
-			idc = 1000;
-			x = 0.455592;
-			y = 0.200908;
-			w = 0.1;
-			h = 0.1;
+			idc = -1;
+			style = 48;
+			text = "z\addons\dayz_code\gui\gender_menu_man.paa";
+			x = 0.28 * safezoneW + safezoneX;
+			y = 0.24 * safezoneH + safezoneY;
+			w = 0.117188 * safezoneW;
+			h = 0.542373 * safezoneH;
+			color[] = { 0.5, 0.5, 0.5, 1 };
+			colorActive[] = { 1, 1, 1, 1 };
+			action = "closeDialog 0;dayz_selectGender = 'Survivor2_DZ';";
 		};
-		class RscButton_1600: RscButton
+		class GenderPic_Woman : RscActiveText
 		{
-			idc = 1600;
-			text = "$STR_UI_GENDER_MALE";
-			x = 0.400884 * safezoneW + safezoneX;
-			y = 0.593966 * safezoneH + safezoneY;
-			w = 0.0881029 * safezoneW;
-			h = 0.0469831 * safezoneH;
-			onButtonClick = "closeDialog 0;dayz_selectGender = 'Survivor2_DZ';";
+			idc = -1;
+			style = 48;
+			text = "z\addons\dayz_code\gui\gender_menu_woman.paa";
+			x = 0.6 * safezoneW + safezoneX;
+			y = 0.24 * safezoneH + safezoneY;
+			w = 0.117188 * safezoneW;
+			h = 0.542373 * safezoneH;
+			color[] = { 0.5, 0.5, 0.5, 1 };
+			colorActive[] = { 1, 1, 1, 1 };
+			action = "closeDialog 0;dayz_selectGender = 'SurvivorW2_DZ';";
 		};
-		class RscButton_1601: RscButton
+		class Gender_Title: RscStructuredText
 		{
-			idc = 1601;
-			text = "$STR_UI_GENDER_FEMALE";
-			x = 0.511013 * safezoneW + safezoneX;
-			y = 0.593966 * safezoneH + safezoneY;
-			w = 0.0881029 * safezoneW;
-			h = 0.0469831 * safezoneH;
-			onButtonClick = "closeDialog 0;dayz_selectGender = 'SurvivorW2_DZ';";
-		};
-		class RscText_1001: RscText
-		{
-			idc = 1001;
+			idc = -1;
 			text = "$STR_UI_GENDER_TITLE";
-			x = 0.400884 * safezoneW + safezoneX;
-			y = 0.394288 * safezoneH + safezoneY;
-			w = 0.198231 * safezoneW;
-			h = 0.0352373 * safezoneH;
+			x = 0.4 * safezoneW + safezoneX;
+			y = 0.221864 * safezoneH + safezoneY;
+			w = 0.2 * safezoneW;
+			h = 0.05 * safezoneH;
+			colorBackground[] = {-1,-1,-1,0};
 		};
-		class RscStructuredText_1100: RscStructuredText
+		class Gender_Description: RscStructuredText
 		{
-			idc = 1100;
+			idc = -1;
 			text = "$STR_UI_GENDER_DESC";
-			x = 0.400884 * safezoneW + safezoneX;
-			y = 0.453017 * safezoneH + safezoneY;
-			w = 0.198231 * safezoneW;
-			h = 0.117458 * safezoneH;
+			x = 0.4 * safezoneW + safezoneX;
+			y = 0.366134 * safezoneH + safezoneY;
+			w = 0.2 * safezoneW;
+			h = 0.3 * safezoneH;
 			colorBackground[] = {-1,-1,-1,0};
 		};
 	};

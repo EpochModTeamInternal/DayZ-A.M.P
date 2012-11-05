@@ -39,7 +39,7 @@ if (count _array > 0) then {
 	if (!isNull _source) then {
 		if (_source != player) then {
 			_canHitFree = 	player getVariable ["freeTarget",false];
-			_isBandit = 	(typeOf player) == "Bandit1_DZ";
+			_isBandit = (["Bandit",typeOf player,false] call fnc_inString);
 			_myKills = 		((player getVariable ["humanKills",0]) / 30) * 1000;
 			if (!_canHitFree and !_isBandit) then {
 				//Process Morality Hit

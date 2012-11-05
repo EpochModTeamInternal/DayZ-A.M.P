@@ -71,25 +71,12 @@ if (_bloodVal < 0.2) then {
 
 if (_thirstVal < 0.2) then {
 	_ctrlThirst call player_guiControlFlash;
-	/*
-	if (_thirstVal <= 0) then {
-		r_player_dead = true;
-		player setVariable["USEC_isDead",true,true];
-	};
-	*/
 };
 
 if (_foodVal < 0.2) then {
 	_ctrlFood call player_guiControlFlash;
-	/*
-	if (_foodVal <= 0) then {
-		r_player_dead = true;
-		player setVariable["USEC_isDead",true,true];
-	};
-	*/
 };
 
-//if (_tempVal < 0.833 || _tempVal > 1.083) then {	//TeeChange
 if (_tempVal < 0.833) then {	//TeeChange
 	_ctrlTemp call player_guiControlFlash;
 };
@@ -102,7 +89,6 @@ if (!canStand player) then {
 	if (!(ctrlShown _ctrlFracture)) then {
 		r_fracture_legs = true;
 		_ctrlFracture ctrlShow true;
-		//_id = true spawn dayz_disableRespawn;
 	};
 };
 
