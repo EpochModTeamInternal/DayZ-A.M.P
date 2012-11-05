@@ -1,5 +1,7 @@
 class CfgVehicles {
 	class Animal;
+	class Pastor;
+	class Fin;
 	class DZAnimal: Animal
 	{
 		scope = 0;
@@ -39,12 +41,24 @@ class CfgVehicles {
 		class VariablesScalar {};
 		class VariablesString {};
 	};
-	class Dog1 : DZAnimal {
+	class DZ_Pastor : Pastor {
 		scope = 2;
 		model = "\ca\animals2\Dogs\Pastor\Pastor";
 		displayName = "Alsatian";
 		moves = "CfgMovesDogDZ";
 		gestures = "CfgGesturesDogDZ";
+		fsmDanger = "";
+		fsmFormation = "";
+	};
+	
+	class DZ_Fin : Fin {
+		scope = 2;
+		model = "\ca\animals2\Dogs\Fin\Fin";
+		displayName = "Fin";
+		moves = "CfgMovesDogDZ";
+		gestures = "CfgGesturesDogDZ";
+		fsmDanger = "";
+		fsmFormation = "";
 	};
 
 	class Soldier_Crew_PMC;
@@ -179,6 +193,67 @@ class CfgVehicles {
 		commanderCanSee = 2+16+32;
 		gunnerCanSee = 2+16+32;
 		driverCanSee = 2+16+32;
+	};
+	//Mi17_Civilian
+	class Mi17_DZ: Mi17_Civilian 
+	{
+		radartype = 0;
+		displayName = "Mi17_DZ";
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		weapons[] = {};
+		magazines[] = {};
+		gunnerHasFlares = false;
+	};
+	//An2_TK_EP1
+	class AN2_DZ: An2_TK_EP1 {
+		radartype = 0;
+		displayName = "AN2_DZ";
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		weapons[] = {};
+		magazines[] = {};
+		gunnerHasFlares = false;
+	};
+	//UH60M_MEV_EP1
+	class UH60M_DZ: UH60M_MEV_EP1 {
+		radartype = 0;
+		displayName = "UH60M_DZ";
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		weapons[] = {};
+		magazines[] = {};
+		gunnerHasFlares = false;
+	};
+	//AH6X_EP1
+	class AH6X_DZ: AH6X_EP1 {
+		radartype = 0;
+		displayName = "AH6X_DZ";
+		scope = 2;
+		side = 2;
+		crew = "";
+		typicalCargo[] = {};
+		hiddenSelections[] = {};
+		class TransportMagazines{};
+		class TransportWeapons{};
+		weapons[] = {};
+		magazines[] = {};
+		gunnerHasFlares = false;
 	};
 	class House {
 		class DestructionEffects;
