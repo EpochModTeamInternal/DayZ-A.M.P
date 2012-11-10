@@ -3,6 +3,8 @@
 
 Main goal: One DayZ CE based client and server build that will run on any arma2 map as it was released by the creator. DayZ AMP will be updated to current DayZ builds quickly.
 
+DayzAMP private hive servers are able to share the same character database meaning that regardless of which server or map you join you will have all of your gear, thirst, hunger, blood, etc. Please note that changing servers will cause your spawn location to be chosen randomly. When rejoining the same server you will always spawn at your last known position.
+
 **Changes**
 ========================
 
@@ -10,23 +12,17 @@ Main Features:
 * Dynamic road debris with loot piles.
 * Randomly placed vehicle spawns on roads and around buildings.
 * Will work on any arma 2 map.
-* All fixes and features from 1.7.3 CE https://github.com/R4Z0R49/DayZMod
+* All fixes and features from 1.7.4 CE https://github.com/R4Z0R49/DayZMod
 
 **Notable Client Changes**
 ========================
 
-* Added - Rocket_DZ skin is now droppable drops on Helicopter crashes.
 * Added - Missing building loot and zombie spawns for many buildings on custom maps.
 * Added - Missing fuel tanks and water well for any map support.
-* Added - New rare canned meat product with 1600 health regen.
 * Removed - All static debris. This is to allow mission placed objects and/or server side dynamic debris system.
-* Removed - All banned classes.
 * Removed - Auto refuel from Land_Ind_FuelStation_Feed_Ep1 fuel station.
-* Removed - Force save in favor of server side induced auto save.
 * Removed - Most arma2oa.RPT log spam client side related to zombie LOS checks and loot spawns.
 * Change - Allow dayz_maxLocalZombies to be set from the init.sqf mission file server side. If not set reverts to default 40.
-* Change - Skin_Soldier1_DZ skin now drops on Military Special zombies and Helicopter crashes.
-* Change - Bear Trap drops now drop on Hunters.
 
 **Server Side Changes**
 ========================
@@ -72,4 +68,4 @@ __________________________________________________________
 
 Thanks to Rocket and all the DayZ CE devs!
 
-***© This setup is based on Dayz CE 1.7.3 - https://github.com/R4Z0R49/DayZMod ©***
+***© This setup is based on Dayz CE 1.7.4 - https://github.com/R4Z0R49/DayZMod ©***
