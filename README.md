@@ -26,7 +26,7 @@ Main Features:
 
 **Server Side Changes**
 ========================
-* Added - Built-in vehicle spawn system randmomly placed on roads and around buildings.
+* Added - Built-in dynamic vehicle spawn system randmomly placed on roads and around buildings.
 * Added - Player spawning in random location if joining from another instance in the private hive.
 * Added - Dynamic road debris with loot piles. Control how many spawn with "MaxDynamicDebris" variable inside the mission init.sqf.
 * Added - to mission init.sqf variables "spawnShoremode" 1 for on shore 0 for anywhere and "spawnArea" to control size of spawn area.
