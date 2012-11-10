@@ -353,7 +353,7 @@ class CfgBuildingLoot {
 			{ "BAF_AS50_scoped","weapon" },
 			{ "Mk_48_DZ","weapon" },
 			{ "M249_DZ","weapon" },
-			{ "BAF_L85A2_RIS_CWS","weapon" },
+			//{"BAF_L85A2_RIS_CWS","weapon"},
 			{ "DMR","weapon" },
 			{ "","military" },
 			{ "","medical" },
@@ -362,9 +362,7 @@ class CfgBuildingLoot {
 			{ "AmmoBoxSmall_556","object" },
 			{ "AmmoBoxSmall_762","object" },
 			{ "Skin_Camo1_DZ","magazine" },
-			{ "Skin_Sniper1_DZ","magazine" },
-			{ "Skin_Rocket_DZ","magazine" },
-			{ "Skin_Soldier1_DZ","magazine" }
+			{"Skin_Sniper1_DZ","magazine"}
 };
 		itemChance[] =	{
 			0.02,		//{"FN_FAL","weapon"},
@@ -375,7 +373,7 @@ class CfgBuildingLoot {
 			0.02,		//{"BAF_AS50_scoped","weapon"},
 			0.03,		//{"Mk_48_DZ","weapon"},
 			0.05,		//{"M249_DZ","weapon"},
-			0.01,		//{"BAF_L85A2_RIS_CWS","weapon"},
+			//0.01,		//{"BAF_L85A2_RIS_CWS","weapon"},
 			0.10,		//{"DMR","weapon"},
 			1,			//{"","military"},
 			0.5,		//{"","medical"},
@@ -384,8 +382,6 @@ class CfgBuildingLoot {
 			0.1,
 			0.1,
 			0.08,
-			0.05,
-			0.01,
 			0.05
 	};
 	};
@@ -538,8 +534,7 @@ class CfgBuildingLoot {
 			{ "","generic" },
 			{ "","military" },
 			//{"Body","object"},
-			{"PipeBomb","magazine"},
-			{ "Skin_Soldier1_DZ","magazine" }
+			{"PipeBomb","magazine"}
 	};
 		itemChance[] =	{
 			0.10,
@@ -584,8 +579,7 @@ class CfgBuildingLoot {
 			1.00,
 			5.00,
 			//0.20,
-			0.01,
-			0.05
+			0.01
 		};
 	};
 	class Church: Residential {

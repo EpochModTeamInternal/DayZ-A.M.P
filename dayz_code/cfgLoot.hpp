@@ -27,8 +27,7 @@ class CfgLoot {
 			"2Rnd_shotgun_74Slug",
 			"2Rnd_shotgun_74Pellets",
 			"ItemBandage",
-			"ItemPainkiller",
-			"FoodBioMeat"
+			"ItemPainkiller"
 		},
 		{
 			0.09,
@@ -45,8 +44,7 @@ class CfgLoot {
 			0.05,
 			0.05,
 			0.06,
-			0.06,
-			0.01
+			0.06
 		}
 	};
 	food[] = {
@@ -271,8 +269,7 @@ class CfgLoot {
 			"10x_303",
 			"ItemWaterbottleUnfilled",
 			"BoltSteel",
-			"ItemHeatPack",
-			"TrapBear"
+			"ItemHeatPack"
 		},
 		{
 			1,
@@ -281,8 +278,7 @@ class CfgLoot {
 			0.5,
 			0.2,
 			1,
-			0.2,
-			0.01
+			0.2
 		}
 	};
 };
