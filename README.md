@@ -12,7 +12,7 @@ Main Features:
 * Dynamic road debris with loot piles.
 * Randomly placed vehicle spawns on roads and around buildings.
 * Will work on any arma 2 map.
-* All fixes and features from 1.7.4 CE https://github.com/R4Z0R49/DayZMod
+* All fixes and features from DayZ CE https://github.com/R4Z0R49/DayZMod
 
 **Notable Client Changes**
 ========================
@@ -26,8 +26,8 @@ Main Features:
 
 **Server Side Changes**
 ========================
-* Added - Spawning in random location if joining from another instance in the private hive.
-* Added - Randomly placed vehicle spawns on roads and around buildings.
+* Added - Built-in vehicle spawn system randmomly placed on roads and around buildings.
+* Added - Player spawning in random location if joining from another instance in the private hive.
 * Added - Dynamic road debris with loot piles. Control how many spawn with "MaxDynamicDebris" variable inside the mission init.sqf.
 * Added - to mission init.sqf variables "spawnShoremode" 1 for on shore 0 for anywhere and "spawnArea" to control size of spawn area.
 * Added - to mission init.sqf variables "MaxHeliCrashes" to control how many helicopters spawn.
